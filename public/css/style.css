@@ -1,7 +1,3 @@
-:root {
-  --primary: #b6895b;
-  --bg: #050505;
-}
 html {
   scroll-behavior: smooth;
 }
@@ -13,9 +9,6 @@ html {
   outline: none;
   border: none;
   text-decoration: none;
-}:root {
-  --primary: #b6895b;
-  --bg: #050505;
 }
 html {
   scroll-behavior: smooth;
