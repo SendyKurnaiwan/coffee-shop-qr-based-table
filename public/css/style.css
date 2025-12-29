@@ -100,11 +100,30 @@ body {
   transition: all ease 0.2s;
 }
 
-.menu .row .menu-card h3 {
+.menu .row .menu-card-title {
   text-align: left;
   color: #050505;
+  margin-top: 1rem auto 0.5rem;
+  margin-left: 1rem;
+  font-size: 2.8rem;
 }
-
+.menu .row .has-jpg-bg-title {
+  text-align: left;
+    color: white;
+    margin-top: 300px;
+    margin-top: 1rem auto 0.5rem;
+    margin-left: 1rem;
+    font-size: 2.8rem;
+}
+.menu .row .has-jpg-bg-price {
+    color: white;
+    display: flexbox;
+    text-align: left;
+    margin-left: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
 .menu .row .menu-card img[src$=".png"]{
   display: flex;
   border-radius: 0px;
@@ -113,12 +132,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   border-radius: 10px 10px 0px 30px;
-}
-
-.menu .row .menu-card-tittle {
-  margin-top: 1rem auto 0.5rem;
-  margin-left: 1rem;
-  font-size: 2.8rem;
 }
 
 .menu .row .box {

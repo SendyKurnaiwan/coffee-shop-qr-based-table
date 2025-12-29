@@ -1,6 +1,6 @@
 :root {
   --primary: #b6895b;
-  --bg: #050505;
+  --bg: #fff;
 }
 
 * {
@@ -11,7 +11,6 @@
   border: none;
   text-decoration: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -183,7 +182,7 @@ body {
 .about,
 .menu,
 .contact {
-  padding: 10rem 7% 1.4rem;
+  padding: 10rem 0rem 1.4rem 0rem;
 }
 
 .about h2,
@@ -199,7 +198,9 @@ body {
 .contact h2 span {
   color: var(--primary);
 }
-
+.gradient-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
 .about .row {
   display: flex;
 }
@@ -314,7 +315,9 @@ footer .credit a {
   color: var(--primary);
   font-weight: 700;
 }
-
+.menu-card {
+    height: 120px;
+  }
 /* Media Queris*/
 
 /* Laptop */
@@ -328,6 +331,9 @@ footer .credit a {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+  .menu-card {
+    height: 120px;
   }
   #hamburger-menu {
     display: inline-block;
@@ -396,7 +402,6 @@ footer .credit a {
   margin: 12px;
   border-radius: 20px;
   background-size: cover;
-  border-bottom: 100px solid #fff;
   transition: transform 0.25s;
   }
   .menu .row .menu-card img[src$=".png"] {
@@ -405,6 +410,9 @@ footer .credit a {
   border-top: 10px;
   border-radius: 10px 10px 0px 30px;
   }
+  .menu .row .has-jpg-bg-title {
+        margin-top: 120px;
+    }
   .contact .row {
     flex-wrap: wrap;
   }
@@ -417,8 +425,16 @@ footer .credit a {
 }
 /* Mobile Phone */
 @media (max-width: 450px) {
+  .menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   html {
     font-size: 52.5%;
+  }
+  .menu-card {
+    height: 90px;
   }
   .menu .row .box {
   height: 160px;
@@ -437,4 +453,7 @@ footer .credit a {
   border-top: 10px;
   border-radius: 10px 10px 0px 30px;
 }
+.menu .row .has-jpg-bg-title {
+        margin-top: 71px;
+    }
 }
