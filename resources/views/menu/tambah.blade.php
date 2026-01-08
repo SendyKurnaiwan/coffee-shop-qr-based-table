@@ -13,26 +13,30 @@
         <!-- CSS -->
         <link href="/bootstrap-4.6.2-dist/css/bootstrap.css" rel="stylesheet">
         <link href="/css/crud.css" rel="stylesheet">
-        <title>Document</title>
+        <title>add</title>
 
     </head>
     <body>
-        <h1 align="center">Edit</h1>
+        <h1 align="center">Tambah</h1>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/update/id={{ $data->id}}" method="POST" enctype="multipart/form-data">
+                            <form action="/insert" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Nama Barang</label>
-                                    <input type="text" name="nama" class="form-control" placeholder="Isikan Nama Barang Anda" value="{{ $data->nama}}">
+                                    <input type="text" name="nama"class="form-control"  placeholder="Isikan Nama Barang Anda">
                                     <div class="form-text"></div>
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Harga :</label>
-                                    <input type="text" name="harga" class="form-control" placeholder="Ketikan Harga Yang Anda Inginkan" value="{{ $data->harga}}">
+                                    <input type="text" name="harga" class="form-control" placeholder="Ketikan Harga Yang Anda Inginkan">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Gambar</label>
+                                    <input type="file" name="foto" class="form-control">
                                 </div>
                                 <!-- <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="exampleCheck1">

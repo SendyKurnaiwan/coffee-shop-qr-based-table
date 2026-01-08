@@ -19,7 +19,6 @@ class CreateCrudsTable extends Migration
             $table->biginteger('harga');
             $table->string('foto');
             $table->timestamps();
-            
         });
     }
 

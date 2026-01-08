@@ -8,12 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Crud extends Model
 {
-    use HasFactory;
-    use HasFormatRupiah;
+    use HasFactory, HasFormatRupiah;
 
-    public function getFormattedPriceAttribute()
-    {
-        return $this->formatCurrency($this->price, 'IDR');
-    }
     protected $guarded = [];
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class, 'order_items')
+            ->using(OrderItem::class)
+            ->withPivot('quantity', 'unit_price', 'subtotal', 'special_instructions', 'status')
+            ->withTimestamps();
+    }
+
+    public function orderItems()
+    {
+        return $this->hasMany(OrderItem::class, 'crud_id');
+    }
 }

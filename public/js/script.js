@@ -12,3 +12,11 @@ document.addEventListener("click", function (e) {
     navbarNav.classList.remove("active");
   }
 });
+function order() {
+  var x = document.getElementById("Order");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

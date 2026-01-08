@@ -1,6 +1,6 @@
 :root {
-  --primary: #b6895b;
-  --bg: #fff;
+  --primary: #584812;
+  --bg: #000000;
 }
 
 * {
@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Poppin", sans-serif;
   background-color: var(--bg);
-  color: #fff;
+  color: #000000;
   /* min-height: 5000px; */
 }
 
@@ -37,11 +37,9 @@ body {
   z-index: 9999;
 }
 
-.navbar .navbar-logo {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fff;
-  font-style: italic;
+.navbar .navbar-logo img {
+  width: 50px;
+  height: 50px;
 }
 .back
 {
@@ -50,10 +48,6 @@ body {
   color: #fff;
   font-style: italic;
 }
-.navbar .navbar-logo span {
-  color: var(--primary);
-}
-
 .back {
   color: #fff;
   display: inline-block;
@@ -83,10 +77,20 @@ body {
 }
 
 .navbar .navbar-extra a:hover {
-  color: var(--primary);
+  color: #ffd700;
+  text-shadow: 
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffdf80,
+    0 0 30px #ffdf80;
 }
 .navbar .navbar-logo span {
-  color: var(--primary);
+  color: #ffd700;
+  text-shadow: 
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffdf80,
+    0 0 30px #ffdf80;
 }
 
 .navbar .navbar-nav a {
@@ -121,10 +125,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
 }
 
@@ -144,21 +144,56 @@ body {
 
 .hero .content {
   padding: 1.4rem 7%;
-  max-width: 60rem;
+  position: center;
+  height: 100vh;
+  width: 70%;
 }
-
-.hero .content h1 {
+.hero .content video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+  }
+  .video-content {
+    margin: 10rem auto;
+        position: relative;
+        z-index: 2;
+        color: white;
+        padding: 2rem;
+    }
+.hero .content .video-content h1 {
   font-size: 5em;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
   line-height: 1.2;
 }
 
-.hero .content h1 span {
-  color: var(--primary);
+.hero .content .video-content h1 span {
+  background: linear-gradient(
+    to bottom,
+    #f5daa3 0%,
+    #f2d16a 25%,
+    #e6b220 50%,
+    #c28a18 75%,
+    #8c6c10 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
 }
 
-.hero .content p {
+.hero .content .video-content p {
   font-size: 1.6rem;
   margin-top: 1rem;
   line-height: 1.4;
@@ -167,17 +202,28 @@ body {
   /* mix-blend-mode: difference; */
 }
 
-.hero .content .cta {
+.hero .content .video-content .cta {
   margin-top: 1rem;
   display: inline-block;
   padding: 1rem 3rem;
   font-size: 1.4rem;
   color: #fff;
-  background-color: var(--primary);
+  background-color: #584812;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
 }
-
+.footer {
+    position: sticky;
+    bottom: 0;
+    background: #333;
+    color: black;
+    padding: 20px;
+    border-radius: 30px;
+    width: 500px; /* Fixed width */
+    margin: 0 auto; /* Center horizontally */
+    left: 0;
+    right: 0; /* Ensure proper centering */
+}
 /* about section */
 .about,
 .menu,
@@ -196,7 +242,18 @@ body {
 .about h2 span,
 .menu h2 span,
 .contact h2 span {
-  color: var(--primary);
+  background: linear-gradient(
+    to bottom,
+    #f5daa3 0%,
+    #f2d16a 25%,
+    #e6b220 50%,
+    #c28a18 75%,
+    #8c6c10 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
 }
 .gradient-overlay {
   background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
@@ -380,6 +437,7 @@ footer .credit a {
 
   .about .row .content {
     padding: 0;
+    
   }
 
   .about .row .content h3 {

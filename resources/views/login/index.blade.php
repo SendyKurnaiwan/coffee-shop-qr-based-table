@@ -35,9 +35,9 @@
                   
               
                   <div class="form-floating">
-                    <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
-                    <label for="email">Email address</label>
-                    @error('email')
+                    <input type="input" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="name" autofocus required value="{{ old('username') }}">
+                    <label for="username">Username</label>
+                    @error('username')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -50,8 +50,6 @@
                   <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
                  
                 </form>
-                <small class="d-block text-center mt-3">Kamu belom registrasi? <a href="/register">Registrasi Dulu</a></small>
-              </main>
         </div>
     </div>
 </body>

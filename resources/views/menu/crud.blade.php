@@ -12,13 +12,20 @@
         <!-- CSS -->
         <link href="/bootstrap-4.6.2-dist/css/bootstrap.css" rel="stylesheet">
         <link href="/css/crud.css" rel="stylesheet">
-        <title>Document</title>
+        <title>admin</title>
 
     </head>
     <body>
         <h1 align="center">Crud</h1>
         <div class="container">
-        <a href="/tambah" type="button" class = "btn btn-success">tambah</a>
+           <a href="/meja" type="button" class = "btn btn-warning">Meja</a> 
+        <a href="/tambah" type="button" class = "btn btn-success" style="margin-left: 20px">tambah</a>
+        @auth
+            <form action="{{ route('logout') }}" method="POST" style="display: inline; float: right;margin-top: 11px;">
+                @csrf
+                <button type="submit" class="btn btn-danger" >Logout</button>
+            </form>
+        @endauth
             <div class="row">
                 @if ($pesan = Session::get('success'))
                     <div class="alert alert-success" role="alert">

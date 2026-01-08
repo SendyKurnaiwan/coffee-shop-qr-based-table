@@ -18,6 +18,12 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        'Illuminate\Auth\Events\Login' => [
+            'App\Listeners\UpdateMejaStatusOnLogin',
+        ],
+        'Illuminate\Auth\Events\Logout' => [  // Optional: Reset on logout
+            'App\Listeners\ResetMejaStatusOnLogout',
+        ],
     ];
 
     /**
